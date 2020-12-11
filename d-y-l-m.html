@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .no {
+            background-color: yellow;
+        }
+        .yes {
+            background-color: red ;
+        }
+
+    </style>
+</head>
+<body>
+<p>Do you love me ?</p>
+<button type="button" onclick="yesLove()" value="yes" class="yes">YES</button>
+<button type="button" value="no" class="no" style="position: relative" onmouseover="noLove()" id="no">NO</button>
+<!--style mang gia tri de so sanh vs random-->
+<script>
+    function yesLove() {
+        alert("Thank you ! Me too !");
+    }
+    function noLove() {
+        let noBtn = document.getElementById("no");
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        noBtn.style.left = Math.floor(Math.random() * width) + "px";
+        noBtn.style.top = Math.floor(Math.random() * height) + "px";
+    }
+</script>
+
+</body>
+</html>
